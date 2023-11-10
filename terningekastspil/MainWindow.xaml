@@ -5,10 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:terningekastspil"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Terningekast" Height="600" Width="1250">
     <Grid>
-        <StackPanel>
-            
-        </StackPanel>
+
+        <Border Padding="10" x:Name="hele" Background="Cornsilk">
+            <StackPanel>
+
+                <!-- LightPink -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!-- <TextBlock Text="Nuværende Score: " FontSize="60" /> TextAlignment="Right"-->
+
+                    <TextBlock x:Name="scoreview" FontSize="100" FontWeight="Bold" Foreground="SpringGreen" TextWrapping="Wrap"/>
+
+                </StackPanel>
+                <!--<TextBlock x:Name="test" Text="nik" FontSize="75"/>-->
+                <!--<StackPanel Orientation="Horizontal">
+	<StackPanel>
+	<TextBlock Text="TerningeSpil" FontSize="75"/>
+	
+	<ComboBox x:Name="combo" SelectedIndex="1" FontSize="35" Margin="0 25">
+	<ComboBoxItem>4 dice</ComboBoxItem>
+	<ComboBoxItem>6 dice</ComboBoxItem>
+	<ComboBoxItem>8 dice</ComboBoxItem>
+	<ComboBoxItem>12 dice</ComboBoxItem>
+	<ComboBoxItem>20 dice</ComboBoxItem>
+	</ComboBox>
+	</StackPanel>-->
+
+                <!--
+	<Grid>
+	<Button x:Name="start_button" Content="start" FontSize="60" />
+	</Grid>
+	-->
+
+                <!--<TextBlock x:Name="tidview"/> -->
+
+                <Grid Margin="0 25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="under_button" Click="under_button_click" Content="Under" Grid.Column="0" FontSize="60"/>
+                    <!--<Button x:Name="start" MouseEnter ="start_enter" MouseLeave="start_leave" Grid.Column="1"/>-->
+                    <Button x:Name="over_button" Click="over_button_click" Content="Over" Grid.Column="2" FontSize="60"/>
+                </Grid>
+
+                <!--<TextBlock x:Name="fire" Visibility="Hidden" Text="!!! Fire !!!" TextAlignment="Center" FontSize="25"/> -->
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- <TextBlock Text="terning: " FontSize="50" /> -->
+                    <Image x:Name="terningside" Width="150" Grid.Column="2"/>
+                    <!-- <TextBlock x:Name="terningview" Text="0" FontSize="50" FontWeight="Bold" Foreground="Navy"/> -->
+                    <!-- <TextBlock Text=" liv: " FontSize="50" /> -->
+                    <!--<TextBlock x:Name="livview" Text="3" FontSize="50" FontWeight="Bold"/> -->
+                    <Image Grid.Column="1" x:Name="billede" Width="200" Source="https://pngimg.com/uploads/dice/dice_PNG129.png" Margin="0 50"/>
+                    <StackPanel HorizontalAlignment="Center" Grid.Column="0" Orientation="Horizontal">
+                        <Image x:Name="liv1" Margin="0 0" Width="100" Source="https://pluspng.com/img-png/heart-png-red-heart-png-image-free-download-1331.png"/>
+                        <Image x:Name="liv2" Margin="25 0" Width="100" Source="https://pluspng.com/img-png/heart-png-red-heart-png-image-free-download-1331.png"/>
+                        <Image x:Name="liv3" Margin="0 0" Width="100" Source="https://pluspng.com/img-png/heart-png-red-heart-png-image-free-download-1331.png"/>
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
